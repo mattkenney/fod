@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport")
+    title= feed.title
+    meta(content="yes" name="mobile-web-app-capable")
+    link(href="images/icon-57.png" rel="apple-touch-icon-precomposed")
+    link(href="images/icon-72.png" rel="apple-touch-icon-precomposed" sizes="72x72")
+    link(href="images/icon-114.png" rel="apple-touch-icon-precomposed" sizes="114x114")
+    link(href="images/icon-144.png" rel="apple-touch-icon-precomposed" sizes="144x144")
+    link(href="images/icon-196.png" rel="shortcut icon" sizes="196x196")
+    style !{style}
+  body
+    h1
+      span= feed.title
+      |
+      |
+      small(class="datetime")= feed.lastBuildDate
+    each item, index in feed.items
+      div(id='i' + (index + 1))
+        hr
+        div
+          small= '#' + (index + 1) + '/' + feed.items.length
+        div !{item.description}
+    script !{script}

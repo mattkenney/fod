@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "dependencies": {
+    "rss-parser": "^3.12.0",
+    "terser": "^5.15.0"
+  },
+  "devDependencies": {
+    "express": "^4.18.1",
+    "pug": "^3.0.2",
+    "sass": "^1.54.9"
+  },
+  "scripts": {
+    "pug": "./pug.mjs src/template.pug dist/template.js",
+    "sass": "sass --no-source-map --style=compressed src/style.scss dist/style.css"
+  }
+}
