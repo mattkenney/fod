@@ -12,7 +12,7 @@ html(lang="en")
     link(href="images/icon-196.png" rel="shortcut icon" sizes="196x196")
     style !{style}
   body
-    h1
+    h1(id='t')
       span= feed.title
       |
       |
@@ -22,5 +22,6 @@ html(lang="en")
         hr
         div
           small= '#' + (index + 1) + '/' + feed.items.length
+          a(class="local r" href="#t") ^
         div !{item.description}
     script !{script}

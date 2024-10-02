@@ -10,7 +10,7 @@
     "sass": "^1.54.9"
   },
   "scripts": {
-    "pug": "./pug.mjs src/template.pug dist/template.js",
-    "sass": "sass --no-source-map --style=compressed src/style.scss dist/style.css"
+    "build": "./build.sh",
+    "preview": "./dist/app.mjs"
   }
 }
